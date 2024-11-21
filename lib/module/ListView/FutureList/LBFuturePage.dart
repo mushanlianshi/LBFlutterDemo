@@ -17,6 +17,41 @@ class LBFuturePage extends StatefulWidget{
 class _LBFuturePageState<LBFuturePage> extends State{
   int _count = 0;
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print("LBLog initState ---------");
+  }
+
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+    print("LBLog didChangeDependencies ---------");
+  }
+
+  @override
+  void didUpdateWidget(covariant StatefulWidget oldWidget) {
+    // TODO: implement didUpdateWidget
+    super.didUpdateWidget(oldWidget);
+    print("LBLog didUpdateWidget ---------");
+  }
+
+  @override
+  void deactivate() {
+    // TODO: implement deactivate
+    super.deactivate();
+    print("LBLog deactivate ---------");
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    print("LBLog dispose ---------");
+  }
+
   //耗时工作，计算偶数个数
   static Future<int> asyncCountEven(int num) async {
     print("LBLog ---- asyncCountEven ${num}");
@@ -53,6 +88,7 @@ class _LBFuturePageState<LBFuturePage> extends State{
 
   @override
   Widget build(BuildContext context) {
+    print("LBLog build --------- ${widget.key}");
     return BltScaffold(
         title: "future 卡顿的",
         child: Center(
@@ -78,11 +114,45 @@ class _LBFuturePageState<LBFuturePage> extends State{
                   doMockTimeConsumeByIsolate();
                 },
                 child: Text('开始耗时工作 不卡顿的'),
+              ),
+              TextButton(
+                onPressed: () {
+                  //触发耗时操作
+                  _testMicroTask();
+                },
+                child: Text('测试微任务队列'),
               )
             ],
           ),
         )
     );
+  }
+
+  _testMicroTask(){
+
+
+
+    Future.delayed(Duration(seconds: 0), (){
+      debugPrint("LBLog eventLoop ---- 1");
+    });
+
+    Future.delayed(Duration(seconds: 0), (){
+      debugPrint("LBLog eventLoop ---- 2");
+    });
+
+    Future.delayed(Duration(seconds: 1), (){
+      debugPrint("LBLog eventLoop 3");
+    });
+
+    Future.microtask(() {
+        debugPrint("LBLog microtask 1");
+    });
+    Future.microtask(() {
+      debugPrint("LBLog microtask 2");
+    });
+
+
+
   }
 
 }

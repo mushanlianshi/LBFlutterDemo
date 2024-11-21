@@ -27,7 +27,7 @@ class LBAlertPage extends StatelessWidget{
                ),
               TextButton(
               onPressed: (){
-                showActionSheet(context, (index){
+                _showActionSheet(context, (index){
                     print("LBLog index is ${index}");
                     Get.back();
                 });
@@ -78,8 +78,10 @@ class LBAlertPage extends StatelessWidget{
     }
 
 
-  showActionSheet(BuildContext context, ActionSheetCallBack callBack){
-    showCupertinoDialog(
+  _showActionSheet(BuildContext context, ActionSheetCallBack callBack){
+    // Future.delayed(duration)
+    // showCupertinoModalPopup(context: context, builder: builder)
+    showCupertinoModalPopup(
         context: context,
         builder: (context){
           return CupertinoActionSheet(
@@ -115,7 +117,7 @@ class LBAlertPage extends StatelessWidget{
 
 
   showTimerPicker(BuildContext context){
-      showCupertinoDialog(context: context, builder: (_){
+    showCupertinoModalPopup(context: context, builder: (_){
           return CupertinoDatePicker(
               use24hFormat: true,
               backgroundColor: CupertinoColors.white,

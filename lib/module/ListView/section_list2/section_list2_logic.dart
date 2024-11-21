@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 import 'package:lb_flutter_project/module/ListView/section_list/section_list_state.dart';
 
-import 'section_list2_state.dart';
-
 class SectionList2Logic extends GetxController {
   RxList<SectionListState> list = <SectionListState>[].obs;
   // RxList<SectionListState> list2 = RxList<SectionListState>();

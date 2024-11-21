@@ -1,7 +1,12 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:lb_flutter_project/common_widget/LBRouter.dart';
 import 'package:lb_flutter_project/module/ListView/FutureList/LBFuturePage.dart';
+import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBCustomSliverHeaderPage.dart';
+import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBSliverFullPage.dart';
+import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBSliverOverlapHeaderPage.dart';
+import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/sliver_list_page_view.dart';
 import 'package:lb_flutter_project/module/ListView/alert/LBAlertPage.dart';
 import 'package:lb_flutter_project/module/ListView/button_style/LBButtonStylePage.dart';
 import 'package:lb_flutter_project/module/ListView/contact/contact_list/contact_list_view.dart';
@@ -29,6 +34,10 @@ class LBRouter{
   static const String contactListPage = "/contactListPage";
   static const String alertPage = "/alertPage";
   static const String futurePage = "/futurePage";
+  static const String overlapHeaderPage = "/overlapHeaderPage";
+  static const String sliverDemoPage = "/sliverDemoPage";
+  static const String sliverFullPage = "/sliverFullPage";
+  static const String customPinHeaderPage = "/customPinHeaderPage";
 
   static final routePages = [
     GetPage(name: LBRouter.tabbar, page: () => TabbarPage()),
@@ -43,7 +52,10 @@ class LBRouter{
     GetPage(name: LBRouter.showScrollIndicatorPage, page: () =>  const LBShowScrollIndicatorPage()),
     GetPage(name: LBRouter.contactListPage, page: () =>  ContactListPage()),
     GetPage(name: LBRouter.alertPage, page: () => const LBAlertPage()),
-    GetPage(name: LBRouter.futurePage, page: () => const LBFuturePage()),
+    GetPage(name: LBRouter.sliverDemoPage, page: () => const LBSliverDemoPage()),
+    GetPage(name: LBRouter.overlapHeaderPage, page: () => const LBSliverOverlapHeaderPage()),
+    GetPage(name: LBRouter.sliverFullPage, page: () => LBSliverFullPage()),
+    GetPage(name: LBRouter.customPinHeaderPage, page: () => LBCustomSliverHeaderPage()),
   ];
 
 }
