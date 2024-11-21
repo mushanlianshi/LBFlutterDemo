@@ -1,11 +1,15 @@
 
 import 'package:get/get.dart';
 import 'package:lb_flutter_project/common_widget/LBRouter.dart';
+import 'package:lb_flutter_project/module/ListView/FutureList/LBFuturePage.dart';
+import 'package:lb_flutter_project/module/ListView/alert/LBAlertPage.dart';
 import 'package:lb_flutter_project/module/ListView/button_style/LBButtonStylePage.dart';
+import 'package:lb_flutter_project/module/ListView/contact/contact_list/contact_list_view.dart';
 import 'package:lb_flutter_project/module/ListView/local_plugin/local_plugin_view.dart';
 import 'package:lb_flutter_project/module/ListView/progress/progress_bar/progress_bar_view.dart';
 import 'package:lb_flutter_project/module/ListView/section_list/section_list_page.dart';
 import 'package:lb_flutter_project/module/ListView/section_list2/section_list2_page.dart';
+import 'package:lb_flutter_project/module/ListView/showScrollIndicator/LBShowScrollIndicatorPage.dart';
 import 'package:lb_flutter_project/module/ListView/time_line_list/time_line_list_view.dart';
 import 'package:lb_flutter_project/module/home/home_page.dart';
 import 'package:lb_flutter_project/module/mine/mine_view.dart';
@@ -21,6 +25,10 @@ class LBRouter{
   static const String progressPar = "/ProgressBarPage";
   static const String timeLineListPage = "/timeLineListPage";
   static const String buttonStylePage = "/buttonStylePage";
+  static const String showScrollIndicatorPage = "/showScrollIndicatorPage";
+  static const String contactListPage = "/contactListPage";
+  static const String alertPage = "/alertPage";
+  static const String futurePage = "/futurePage";
 
   static final routePages = [
     GetPage(name: LBRouter.tabbar, page: () => TabbarPage()),
@@ -32,6 +40,10 @@ class LBRouter{
     GetPage(name: LBRouter.progressPar, page: () =>  const ProgressBarPage()),
     GetPage(name: LBRouter.timeLineListPage, page: () =>  const TimeLineListPage()),
     GetPage(name: LBRouter.buttonStylePage, page: () =>  const LBButtonStylePage()),
+    GetPage(name: LBRouter.showScrollIndicatorPage, page: () =>  const LBShowScrollIndicatorPage()),
+    GetPage(name: LBRouter.contactListPage, page: () =>  ContactListPage()),
+    GetPage(name: LBRouter.alertPage, page: () => const LBAlertPage()),
+    GetPage(name: LBRouter.futurePage, page: () => const LBFuturePage()),
   ];
 
 }

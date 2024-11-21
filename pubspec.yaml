@@ -50,6 +50,8 @@ dependencies:
   flutter_smart_dialog: ^4.9.5
   # 进度条
   step_progress_indicator: 1.0.2
+  #sp
+  shared_preferences: ^2.2.2
 
   #加载本地制作的plugin
   my_flutter_plugin:

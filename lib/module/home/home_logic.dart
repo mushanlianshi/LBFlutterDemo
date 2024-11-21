@@ -22,9 +22,13 @@ class HomeLogic extends GetxController {
     final progressModel = LBHomeListModel(title: "进度条", router: LBRouter.progressPar);
     final timeLineModel = LBHomeListModel(title: "时间轴", router: LBRouter.timeLineListPage);
     final buttonStyleModel = LBHomeListModel(title: "按钮样式", router: LBRouter.buttonStylePage);
+    final scrollIndicator = LBHomeListModel(title: "显示scrollbar指示条", router: LBRouter.showScrollIndicatorPage);
+    final contactList = LBHomeListModel(title: "通讯录", router: LBRouter.contactListPage);
+    final alertModel = LBHomeListModel(title: "弹框", router: LBRouter.alertPage);
+    final futureModel = LBHomeListModel(title: "future 和 Isolate", router: LBRouter.futurePage);
     dataList.addAll([
       customScrollModel1, customScrollModel2, localPluginModel, progressModel, timeLineModel,
-      buttonStyleModel,
+      buttonStyleModel, scrollIndicator, contactList, alertModel, futureModel
     ]);
   }
 

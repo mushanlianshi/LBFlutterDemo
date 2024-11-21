@@ -35,4 +35,8 @@ abstract class MyFlutterPluginPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
+  electronicLevel(EventCallback callback) {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
 }

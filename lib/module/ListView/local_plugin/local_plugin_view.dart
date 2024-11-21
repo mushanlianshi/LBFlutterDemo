@@ -12,6 +12,7 @@ class LocalPluginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final LocalPluginLogic logic = Get.put(LocalPluginLogic());
     logic.refreshPluginValue();
+    logic.listEventChannel();
     print("LBLog LocalPluginPage build -------");
       return BltScaffold(
           title: "自己制作plugin",
@@ -22,6 +23,8 @@ class LocalPluginPage extends StatelessWidget {
                 Text("姓名：" + logic.nameObs.value, style: TextStyle(fontSize: 14, color: Colors.black)),
                 Text("版本号：" + logic.versionObs.value, style: TextStyle(fontSize: 14, color: Colors.black)),
                 Text("是否支持相机" + (logic.isAvaliableObs.value ? "是" : "否"), style: TextStyle(fontSize: 14, color: Colors.black)),
+                Text("接收到eventChannel: " + logic.electronicObs.value, style: TextStyle(fontSize: 14, color: Colors.black)),
+                Text("接收到eventChannel2: " + logic.electronic22Obs.value, style: TextStyle(fontSize: 14, color: Colors.black)),
               ],
             ).intoContainer(
               padding: EdgeInsets.symmetric(horizontal: 15),
