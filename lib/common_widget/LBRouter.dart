@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:lb_flutter_project/common_widget/LBRouter.dart';
 import 'package:lb_flutter_project/module/ListView/FutureList/LBFuturePage.dart';
+import 'package:lb_flutter_project/module/ListView/NestList/nest_list/LBNestTabbarPage.dart';
+import 'package:lb_flutter_project/module/ListView/NestList/nest_list/nest_list_view.dart';
 import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBCustomSliverHeaderPage.dart';
 import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBSliverFullPage.dart';
 import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBSliverOverlapHeaderPage.dart';
@@ -38,6 +40,8 @@ class LBRouter{
   static const String sliverDemoPage = "/sliverDemoPage";
   static const String sliverFullPage = "/sliverFullPage";
   static const String customPinHeaderPage = "/customPinHeaderPage";
+  static const String nestDemoPage = "/nestDemoPage";
+  static const String nestTabbarPage = "/nestTabbarPage";
 
   static final routePages = [
     GetPage(name: LBRouter.tabbar, page: () => TabbarPage()),
@@ -51,11 +55,13 @@ class LBRouter{
     GetPage(name: LBRouter.buttonStylePage, page: () =>  const LBButtonStylePage()),
     GetPage(name: LBRouter.showScrollIndicatorPage, page: () =>  const LBShowScrollIndicatorPage()),
     GetPage(name: LBRouter.contactListPage, page: () =>  ContactListPage()),
-    GetPage(name: LBRouter.alertPage, page: () => const LBAlertPage()),
+    GetPage(name: LBRouter.alertPage, page: () => LBAlertPage()),
     GetPage(name: LBRouter.sliverDemoPage, page: () => const LBSliverDemoPage()),
     GetPage(name: LBRouter.overlapHeaderPage, page: () => const LBSliverOverlapHeaderPage()),
     GetPage(name: LBRouter.sliverFullPage, page: () => LBSliverFullPage()),
     GetPage(name: LBRouter.customPinHeaderPage, page: () => LBCustomSliverHeaderPage()),
+    GetPage(name: LBRouter.nestDemoPage, page: () => NestListPage()),
+    GetPage(name: LBRouter.nestTabbarPage, page: () => LBNestTabbarPage()),
   ];
 
 }

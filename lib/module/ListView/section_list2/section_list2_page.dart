@@ -14,8 +14,9 @@ class SectionListPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final SectionList2Logic logic = Get.put(SectionList2Logic());
+    print("LBLog ${ThemeData().scaffoldBackgroundColor}");
     // final SectionList2State state = Bind.find<SectionList2Logic>().state;
-
+  // return _buildListWidget();
     return BltScaffold(title: "sectionList 2", child: _buildListWidget());
   }
 
@@ -26,26 +27,32 @@ class SectionListPage2 extends StatelessWidget {
           itemCount: logic.list.length,
           itemBuilder: (_, index) {
             SectionListState state = logic.list[index];
+            print("LBlog height is ${state.list.length * 50}");
             return StickyHeader(
-                header: Container(
-                  color: Colors.lightBlue,
-                  child: Text(state.sectionTitle,
-                      style: TextStyle(fontSize: 16, color: Colors.black)),
-                ),
+              /// 使用LayoutBuilder 获取到屏幕的宽度
+                header: LayoutBuilder(builder: (_, constraints){
+                    return Container(
+                      width: constraints.maxWidth,
+                      color: Colors.lightBlue,
+                      child: Text(state.sectionTitle,
+                          style: TextStyle(fontSize: 16, color: Colors.black)),
+                    );
+                }),
                 content: ListView.builder(
+                  /// 设置listview不可滚动
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: state.list.length,
+                    itemExtent: 50,
                     itemBuilder: (_, index) {
                       String text = state.list[index];
-                      return Container(
-                          height: 50,
-                          color: Colors.white,
-                          child: Text(
-                            text, style: TextStyle(fontSize: 14, color: Colors
-                              .black),)
-                      ).intoSizedBox(
-                         height: state.list.length * 50,
-                      );
+                      return Text(
+                          text, style: TextStyle(fontSize: 14, color: Colors
+                          .black)).intoContainer(color: Colors.grey);
                     }
                 )
+                //     .intoSizedBox(
+                //   height:  state.list.length * 50,
+                // )
             );
           });
     });
