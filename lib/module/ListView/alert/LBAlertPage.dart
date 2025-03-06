@@ -6,6 +6,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:lb_flutter_project/common_widget/BLTScaffoldWidget.dart';
+import 'package:lb_flutter_project/main.dart';
 import 'package:retrofit/http.dart';
 
 
@@ -26,7 +27,8 @@ class LBAlertPage extends StatelessWidget{
     if(Get.arguments != null && Get.arguments is Map<String, dynamic>){
         if (Get.arguments["context"] is BuildContext){
           superContext = Get.arguments["context"];
-          print("LBLog superContext ${superContext}");
+          // superContext = navigatorKey.currentContext;
+          print("LBLog superContext ${identityHashCode(superContext)}");
         }
     }
       return BltScaffold(title: "弹框", child: Column(
@@ -70,8 +72,9 @@ class LBAlertPage extends StatelessWidget{
   }
 
     _showAlert(BuildContext context){
-      SmartDialog.showToast("LBLog alert page alert");
-      return;
+    // SmartDialog.showToast("LBlog smart dialog ====");
+    // return;
+    debugPrint("LBLog context is ${identityHashCode(superContext)}");
         showCupertinoDialog(
             context: superContext ?? context,
             builder: (context){
@@ -101,12 +104,11 @@ class LBAlertPage extends StatelessWidget{
 
 
   _showActionSheet(BuildContext context, ActionSheetCallBack callBack){
-    EasyLoading.showToast("LBlog EasyLoading ----");
-    return;
-    // Future.delayed(duration)
+    // EasyLoading.showToast("LBLog easy loading ====");
+    // return;
     // showCupertinoModalPopup(context: context, builder: builder)
     showCupertinoModalPopup(
-        context: context,
+        context: superContext ?? context,
         builder: (context){
           return CupertinoActionSheet(
               title: const Text("Cupertino ios actionsheet"),

@@ -26,11 +26,11 @@ class HomeLogic extends GetxController {
     final contactList = LBHomeListModel(title: "通讯录", router: LBRouter.contactListPage);
     final alertModel = LBHomeListModel(title: "弹框", router: LBRouter.alertPage);
     final futureModel = LBHomeListModel(title: "future 和 Isolate", router: LBRouter.futurePage);
-    final sliverDemo = LBHomeListModel(title: "sliver demo", router: LBRouter.sliverDemoPage);
+    final sliverDemo = LBHomeListModel(title: "sliver 各样列表的 demo", router: LBRouter.sliverDemoPage);
     final nestDemo = LBHomeListModel(title: "nest demo", router: LBRouter.nestDemoPage);
     dataList.addAll([
       customScrollModel1, customScrollModel2, localPluginModel, progressModel, timeLineModel,
-      buttonStyleModel, scrollIndicator, contactList, alertModel, futureModel, sliverDemo, nestDemo
+      buttonStyleModel, scrollIndicator, contactList, alertModel, futureModel, sliverDemo, nestDemo,
     ]);
   }
 

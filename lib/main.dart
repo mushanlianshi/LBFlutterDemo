@@ -34,6 +34,9 @@ void main() {
 
 }
 
+// 先新建一个navigatorKey  navigatorKey.currentContext获取导航上下文。处理没有context弹框的问题
+GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -41,6 +44,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      navigatorKey: navigatorKey,
       title: 'LB Flutter Demo',
       /// child这个widge是最后要显示的widget 必须要在布局中，不然不展示界面了
       builder: (context, child){

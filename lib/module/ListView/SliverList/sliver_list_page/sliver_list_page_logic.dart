@@ -20,8 +20,9 @@ class SliverListPageLogic extends GetxController {
     final overlapModel = LBHomeListModel(title: "头部重叠效果的", router: LBRouter.overlapHeaderPage);
     final fillPageModel = LBHomeListModel(title: "SliverFillViewport 充满整个屏幕的", router: LBRouter.sliverFullPage);
     final customHeader = LBHomeListModel(title: "自定义顶部header效果的", router: LBRouter.customPinHeaderPage);
+    final navigationBarAlpha = LBHomeListModel(title: "顶部导航栏渐变的22", router: LBRouter.navigationBarAlpha);
     dataList.addAll([
-      overlapModel, fillPageModel, customHeader
+      overlapModel, fillPageModel, customHeader, navigationBarAlpha
     ]);
   }
 

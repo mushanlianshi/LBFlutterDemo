@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
                 title: child,
                 onTap: (){
                   if(model.router == LBRouter.alertPage){
+                    print("LBLog LBTestWidget build ${identityHashCode(StaticClassProxy.context)}");
                     Get.toNamed(model.router, arguments: {"context" : StaticClassProxy.context});
                   }else{
                     Get.toNamed(model.router);
@@ -77,8 +78,25 @@ class _LBTestWigetState extends State<LBTestWiget>{
   /// SmartDialog或则EasyLoading就是这样做的
   @override
   Widget build(BuildContext context) {
-    print("LBLog LBTestWidget build");
+    print("LBLog LBTestWidget build ${identityHashCode(context)}");
+    print("LBLog LBTestWidget child ${widget.child}");
     StaticClassProxy.context = context;
+    // Material(color: Colors.transparent, child: child)
+    return Material(
+        child: Overlay(
+          initialEntries: [
+            OverlayEntry(
+              builder: (BuildContext context) {
+                if (widget.child != null) {
+                  return widget.child!;
+                } else {
+                  return Container();
+                }
+              },
+            ),
+          ],
+        ),
+    );
     return widget.child ?? Container();
   }
 

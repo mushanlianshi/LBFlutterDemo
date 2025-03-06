@@ -7,7 +7,8 @@ import 'package:retrofit/http.dart';
 
 
 
-// 声明他的注解生成文件 rest_client.g.dart  会自动创建生成rest_client.g.dart文件
+// 1.声明他的注解生成文件 rest_client.g.dart  会自动创建生成rest_client.g.dart文件
+// 2.每次修改过这个文件都执行下  flutter pub run build_runner build 重新生成.g.dart文件
 part 'rest_client.g.dart';
 
 @RestApi(baseUrl: Http.defaultBaseUrl)
@@ -27,6 +28,10 @@ abstract class RestClient {
   // 登录-请求发送短信验证码
   @POST('user/captcha/wanjianhaofang/send/smsCode')
   Future<CommonResp<String>> sendSmsCode(@Body() Map<String, dynamic> params);
+
+  // 登录-获取滑块验证码 url
+  // @POST('App404/Index/getMainWebUrl')
+  // Future<CommonResp<LbTestResult>> getMainWebUrl();
 
   // // 登录-请求发送短信验证码
   // @POST('user/wanjianhaofang/login')

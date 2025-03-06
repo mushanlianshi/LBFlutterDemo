@@ -10,6 +10,7 @@ import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/L
 import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBSliverOverlapHeaderPage.dart';
 import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/sliver_list_page_view.dart';
 import 'package:lb_flutter_project/module/ListView/alert/LBAlertPage.dart';
+import 'package:lb_flutter_project/module/ListView/alphaNavigationBar/LBNavigationAlphaBarPage.dart';
 import 'package:lb_flutter_project/module/ListView/button_style/LBButtonStylePage.dart';
 import 'package:lb_flutter_project/module/ListView/contact/contact_list/contact_list_view.dart';
 import 'package:lb_flutter_project/module/ListView/local_plugin/local_plugin_view.dart';
@@ -42,6 +43,7 @@ class LBRouter{
   static const String customPinHeaderPage = "/customPinHeaderPage";
   static const String nestDemoPage = "/nestDemoPage";
   static const String nestTabbarPage = "/nestTabbarPage";
+  static const String navigationBarAlpha = "/navigationBarAlpha";
 
   static final routePages = [
     GetPage(name: LBRouter.tabbar, page: () => TabbarPage()),
@@ -62,6 +64,7 @@ class LBRouter{
     GetPage(name: LBRouter.customPinHeaderPage, page: () => LBCustomSliverHeaderPage()),
     GetPage(name: LBRouter.nestDemoPage, page: () => NestListPage()),
     GetPage(name: LBRouter.nestTabbarPage, page: () => LBNestTabbarPage()),
+    GetPage(name: LBRouter.navigationBarAlpha, page: () => const LBNavigationAlphaBarPage()),
   ];
 
 }

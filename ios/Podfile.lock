@@ -126,14 +126,14 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   audio_session: 088d2483ebd1dc43f51d253d4a1c517d9a2e7207
   camera_avfoundation: 8b8d780bcfb6a4a02b0fbe2b4bd17b5b71946e68
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_sound_record: fa9800029599bccfaa8be22cc372550a5fa505ac
   fluwx: 3c7b6df42f83d444d4538f3eaeae079f12d30c37
   image_gallery_saver: cb43cc43141711190510e92c460eb1655cd343cb
   just_audio: baa7252489dbcf47a4c7cc9ca663e9661c99aafa
   map_launcher: 5fde49ac9a52672bf99da746599f507b4490d7b5
   my_flutter_plugin: 26973957508a2e02c9882afb022ed434fa14ce25
-  package_info_plus: 115f4ad11e0698c8c1c5d8a689390df880f47e85
+  package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
   path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
   permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
   photo_manager: 4f6810b7dfc4feb03b461ac1a70dacf91fba7604
@@ -144,9 +144,9 @@ SPEC CHECKSUMS:
   sqflite: 673a0e54cc04b7d6dba8d24fb8095b31c3a99eec
   url_launcher_ios: bbd758c6e7f9fd7b5b1d4cde34d2b95fcce5e812
   video_player_avfoundation: e9e6f9cae7d7a6d9b43519b0aab382bca60fcfd1
-  wakelock_plus: 8b09852c8876491e4b6d179e17dfe2a0b5f60d47
+  wakelock_plus: 373cfe59b235a6dd5837d0fb88791d2f13a90d56
   WechatOpenSDK-XCFramework: 36fb2bea0754266c17184adf4963d7e6ff98b69f
 
-PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+PODFILE CHECKSUM: 8518cc03ba7b942c44ef308c55cbd5c1cf60717b
 
 COCOAPODS: 1.15.2

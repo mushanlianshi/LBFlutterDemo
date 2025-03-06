@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:lb_flutter_project/common_widget/BLTScaffoldWidget.dart';
 
 import 'section_list_logic.dart';
-import 'section_list_state.dart';
+import 'section_list_state.dart';flutter pub get --verbose
 
 // 类似iOS section 样式的
 class SectionListPage extends StatelessWidget {
