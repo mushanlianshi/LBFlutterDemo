@@ -10,6 +10,24 @@ class MockMyFlutterPluginPlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  electronicLevel(EventCallback callback) {
+    // TODO: implement electronicLevel
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool?> isCameraAvaible() {
+    // TODO: implement isCameraAvaible
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<String?> whatYourName() {
+    // TODO: implement whatYourName
+    throw UnimplementedError();
+  }
 }
 
 void main() {

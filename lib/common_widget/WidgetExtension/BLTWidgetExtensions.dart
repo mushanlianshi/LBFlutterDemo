@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 /// extension to make it is possible to use function calling instead of Widget Constructor
@@ -26,6 +28,11 @@ extension WidgetChantExt_Widget on Widget {
 
   List<Widget> asList() {
     return [this];
+  }
+
+
+  Obx intoObx(){
+    return Obx(() => this);
   }
 
   Align intoAlign({

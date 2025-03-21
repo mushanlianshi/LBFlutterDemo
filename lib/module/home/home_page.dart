@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:lb_flutter_project/common_widget/LBRouter.dart';
 
 import 'home_logic.dart';
-import 'home_state.dart';
 
 class StaticClassProxy{
   static BuildContext? context;

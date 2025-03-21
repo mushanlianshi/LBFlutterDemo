@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:lb_flutter_project/common_widget/LBRouter.dart';
 import 'package:lb_flutter_project/module/ListView/FutureList/LBFuturePage.dart';
+import 'package:lb_flutter_project/module/ListView/Hooks/LBHooksPage.dart';
 import 'package:lb_flutter_project/module/ListView/NestList/nest_list/LBNestTabbarPage.dart';
 import 'package:lb_flutter_project/module/ListView/NestList/nest_list/nest_list_view.dart';
 import 'package:lb_flutter_project/module/ListView/SliverList/sliver_list_page/LBCustomSliverHeaderPage.dart';
@@ -13,6 +14,7 @@ import 'package:lb_flutter_project/module/ListView/alert/LBAlertPage.dart';
 import 'package:lb_flutter_project/module/ListView/alphaNavigationBar/LBNavigationAlphaBarPage.dart';
 import 'package:lb_flutter_project/module/ListView/button_style/LBButtonStylePage.dart';
 import 'package:lb_flutter_project/module/ListView/contact/contact_list/contact_list_view.dart';
+import 'package:lb_flutter_project/module/ListView/getx/lb_test_getx/lb_test_getx_view.dart';
 import 'package:lb_flutter_project/module/ListView/local_plugin/local_plugin_view.dart';
 import 'package:lb_flutter_project/module/ListView/progress/progress_bar/progress_bar_view.dart';
 import 'package:lb_flutter_project/module/ListView/section_list/section_list_page.dart';
@@ -44,6 +46,8 @@ class LBRouter{
   static const String nestDemoPage = "/nestDemoPage";
   static const String nestTabbarPage = "/nestTabbarPage";
   static const String navigationBarAlpha = "/navigationBarAlpha";
+  static const String testGetx = "/testGetx";
+  static const String hooksPage = "/hooksPage";
 
   static final routePages = [
     GetPage(name: LBRouter.tabbar, page: () => TabbarPage()),
@@ -62,9 +66,11 @@ class LBRouter{
     GetPage(name: LBRouter.overlapHeaderPage, page: () => const LBSliverOverlapHeaderPage()),
     GetPage(name: LBRouter.sliverFullPage, page: () => LBSliverFullPage()),
     GetPage(name: LBRouter.customPinHeaderPage, page: () => LBCustomSliverHeaderPage()),
-    GetPage(name: LBRouter.nestDemoPage, page: () => NestListPage()),
+    GetPage(name: LBRouter.nestDemoPage, page: () => const NestListPage()),
     GetPage(name: LBRouter.nestTabbarPage, page: () => LBNestTabbarPage()),
     GetPage(name: LBRouter.navigationBarAlpha, page: () => const LBNavigationAlphaBarPage()),
+    GetPage(name: LBRouter.testGetx, page: () => const LbTestGetxPage()),
+    GetPage(name: LBRouter.hooksPage, page: () => const LBHooksPage()),
   ];
 
 }

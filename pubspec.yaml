@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.6.0 <4.0.0'
+  sdk: '>=3.0.0 <3.6.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -94,6 +94,9 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   grouped_list: ^6.0.0
+
+  #flutter中的钩子
+  flutter_hooks: ^0.21.2
   #加载本地制作的plugin
   my_flutter_plugin:
     path: lib/localPlugin/my_flutter_plugin
