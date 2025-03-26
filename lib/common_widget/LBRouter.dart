@@ -1,8 +1,7 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:lb_flutter_project/common_widget/LBRouter.dart';
-import 'package:lb_flutter_project/module/ListView/FutureList/LBFuturePage.dart';
+import 'package:lb_flutter_project/module/EnumConvert/l_b_enum_convert_page/l_b_enum_convert_page_view.dart';
+import 'package:lb_flutter_project/module/GradientPage/LBGradientPage.dart';
 import 'package:lb_flutter_project/module/ListView/Hooks/LBHooksPage.dart';
 import 'package:lb_flutter_project/module/ListView/NestList/nest_list/LBNestTabbarPage.dart';
 import 'package:lb_flutter_project/module/ListView/NestList/nest_list/nest_list_view.dart';
@@ -48,6 +47,8 @@ class LBRouter{
   static const String navigationBarAlpha = "/navigationBarAlpha";
   static const String testGetx = "/testGetx";
   static const String hooksPage = "/hooksPage";
+  static const String gradientPage = "/gradientPage";
+  static const String convertEnum = "/convertEnum";
 
   static final routePages = [
     GetPage(name: LBRouter.tabbar, page: () => TabbarPage()),
@@ -71,6 +72,8 @@ class LBRouter{
     GetPage(name: LBRouter.navigationBarAlpha, page: () => const LBNavigationAlphaBarPage()),
     GetPage(name: LBRouter.testGetx, page: () => const LbTestGetxPage()),
     GetPage(name: LBRouter.hooksPage, page: () => const LBHooksPage()),
+    GetPage(name: LBRouter.gradientPage, page: () => LBGradientPage()),
+    GetPage(name: LBRouter.convertEnum, page: () => LBEnumConvertPagePage()),
   ];
 
 }

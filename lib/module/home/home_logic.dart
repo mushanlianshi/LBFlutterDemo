@@ -30,10 +30,13 @@ class HomeLogic extends GetxController {
     const nestDemo = LBHomeListModel(title: "nest demo", router: LBRouter.nestDemoPage);
     const getxExtension = LBHomeListModel(title: "测试getx 扩展", router: LBRouter.testGetx);
     const hooksPage = LBHomeListModel(title: "hooks 测试", router: LBRouter.hooksPage);
+    const gradientPage = LBHomeListModel(title: "渐变色", router: LBRouter.gradientPage);
+    const enumConvertPage = LBHomeListModel(title: "枚举转换", router: LBRouter.convertEnum);
+
     dataList.addAll([
       customScrollModel1, customScrollModel2, localPluginModel, progressModel, timeLineModel,
       buttonStyleModel, scrollIndicator, contactList, alertModel, futureModel, sliverDemo, nestDemo,
-      getxExtension, hooksPage
+      getxExtension, hooksPage, gradientPage, enumConvertPage
     ]);
   }
 

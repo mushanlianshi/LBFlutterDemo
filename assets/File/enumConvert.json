@@ -1,0 +1,23 @@
+[
+  {
+    "name" : "刘彬",
+    "sexType" : 1,
+    "colorType" : "blue",
+    "payType" : 1,
+    "stringType" : 12
+  },
+  {
+    "name" : "李磊",
+    "sexType" : 0,
+    "colorType" : "yellow",
+    "payType" : 2,
+    "stringType" : 11
+  },
+  {
+    "name" : "网二",
+    "sexType" : 1,
+    "colorType" : "red",
+    "payType" : 3,
+    "stringType" : 10
+  }
+]
