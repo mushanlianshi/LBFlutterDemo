@@ -17,6 +17,17 @@ class LbTestGetxLogic extends GetxController {
   void onClose() {
     // TODO: implement onClose
     super.onClose();
+
+    Future.microtask((){
+
+    });
+
+
+
+    scheduleMicrotask((){
+
+    });
+
   }
 
   void startTimer(){

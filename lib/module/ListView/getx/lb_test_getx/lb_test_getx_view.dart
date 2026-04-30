@@ -5,6 +5,26 @@ import 'package:lb_flutter_project/common_widget/WidgetExtension/BLTWidgetExtens
 
 import 'lb_test_getx_logic.dart';
 
+class ObxWidget22 extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return ObxWidget22State();
+  }
+
+}
+
+class ObxWidget22State extends State{
+  @override
+  Widget build(BuildContext context) {
+    setState(() {
+
+    });
+    return Text("data");
+  }
+
+}
+
 class LbTestGetxPage extends StatelessWidget {
   const LbTestGetxPage({Key? key}) : super(key: key);
 

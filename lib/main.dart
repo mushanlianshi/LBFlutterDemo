@@ -40,15 +40,48 @@ GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+// 创建单订阅 Stream（默认）
+    final controller = StreamController<int>();
+
+    var streams = controller.stream.asBroadcastStream();
+    streams.listen((data){
+      print('Listener 2 received: $data');
+    });
+    streams.listen((data){
+      print('Listener 3 received: $data');
+    });
+
+    // 第一次订阅成功
+    // controller.stream.listen((data) {
+    //   print('Listener 1 received: $data');
+    // });
+
+    // 添加数据
+    controller.add(1);
+    controller.add(2);
+    controller.close();
+
+
+    //第二次订阅将抛异常（这是单订阅的特性）
+    // controller.stream.listen((data) {
+    //   print('Listener 2 received: $data');
+    // });
+
+    // Future.delayed(Duration(seconds: 3), (){
+    //   SmartDialog.showToast("test smart toast context");
+    // });
+
     return GetMaterialApp(
       navigatorKey: navigatorKey,
       title: 'LB Flutter Demo',
       /// child这个widge是最后要显示的widget 必须要在布局中，不然不展示界面了
       builder: (context, child){
         print("LBLog app context is  ${child}");
+        // 通过TransitionBuilder.init静态方法来初始化一个TransitionBuilder ，然后用这个builder来调用
         final smartDialog = FlutterSmartDialog.init();
         final easyLoading = EasyLoading.init();
         /// 加入到builder方法里的控件，把跟widget挂载这些三方widget下，一层层嵌套都在布局中了都有上下文了，
